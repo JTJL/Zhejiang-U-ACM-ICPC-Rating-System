@@ -1,0 +1,30 @@
+</table>
+</center>
+
+<script type="text/javascript">
+function genRandomColor()
+{
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++)
+    color += letters[Math.floor(Math.random() * 16)];
+  return color;
+}
+
+window.setInterval(function() {
+  var fonts = document.querySelectorAll('.stnd > font');
+  for (var i = 0; i < fonts.length; i++)
+  {
+    var font = fonts[i];
+    if (font.getAttribute('color') != 'colorful')
+      continue;
+    if (font.firstElementChild == null)
+      font.innerHTML = '<font color="' + genRandomColor() + '">' + font.innerHTML + '</font>';
+    else
+      font.firstElementChild.setAttribute('color', genRandomColor());
+  }
+}, 150);
+</script>
+
+</body>
+</html>

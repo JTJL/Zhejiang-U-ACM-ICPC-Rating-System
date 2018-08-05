@@ -1,0 +1,51 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Zhejiang U Rating System</title>
+<link rel="stylesheet" type="text/css" href="1.css">
+<!--[if IE 7]><style type="text/css">.zmenu li {float:left;}</style><![endif]-->
+</head>
+<style>
+IMG
+{
+ border="0"
+}
+</style>
+<body>
+<center>
+<table class="standings">
+<tr><th class="stnd">Place</th><th class="stnd">Name</th><th class="stnd">Contest 1</th><th class="stnd">Contest 2</th><th class="stnd">Rating</th><tr>
+<tr><td class="stnd">1</td><td class="stnd"><font color=3bb78b>Sua</font></td><td class="stnd">188.462</td><td class="stnd">139.250</td><td class="stnd">163.8559307991</td></tr>
+<tr><td class="stnd">2</td><td class="stnd"><font color=fa2079>Leg</font></td><td class="stnd">-</td><td class="stnd">138.593</td><td class="stnd">138.5934819897</td></tr>
+<tr><td class="stnd">3</td><td class="stnd"><font color=589fa6>Rcq</font></td><td class="stnd">140.000</td><td class="stnd">116.331</td><td class="stnd">128.1653640477</td></tr>
+<tr><td class="stnd">4</td><td class="stnd"><font color=33a030>Eus</font></td><td class="stnd">135.692</td><td class="stnd">36.007</td><td class="stnd">85.8497189085</td></tr>
+</table>
+</center>
+
+<script type="text/javascript">
+function genRandomColor()
+{
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++)
+    color += letters[Math.floor(Math.random() * 16)];
+  return color;
+}
+
+window.setInterval(function() {
+  var fonts = document.querySelectorAll('.stnd > font');
+  for (var i = 0; i < fonts.length; i++)
+  {
+    var font = fonts[i];
+    if (font.getAttribute('color') != 'colorful')
+      continue;
+    if (font.firstElementChild == null)
+      font.innerHTML = '<font color="' + genRandomColor() + '">' + font.innerHTML + '</font>';
+    else
+      font.firstElementChild.setAttribute('color', genRandomColor());
+  }
+}, 150);
+</script>
+
+</body>
+</html>
