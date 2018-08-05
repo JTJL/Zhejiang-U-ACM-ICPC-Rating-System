@@ -1,13 +1,8 @@
 #!/usr/bin/env python3
-from getpass import getpass
-from subprocess import call, PIPE, Popen
-from itertools import combinations
-from math import exp
 from random import randint
 import csv
 
 K1 = 100
-K2 = 1
 
 team = {}
 
@@ -83,7 +78,6 @@ for x in final_standing:
 			sss.append('-')
 		else:
 			sss.append("%.3f" % y)
-	#<font color=pink>Place</font>
 	if True:
 		COL = ""
 		for i in range(6):
